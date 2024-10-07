@@ -25,15 +25,22 @@ You can install the dependencies using requirements.txt:
 
 pip install -r requirements.txt
 
-## Installation
+### Installation
 Clone the repository:
 
+```bash
 git clone https://github.com/RichardGuo0301/Dual-Domain-FTA.git
+```
+```bash
 cd your-repo
+```
 
 Install the dependencies:
 
+```bash
 pip install -r requirements.txt
+```
+
 ## Usage
 Training:
 
