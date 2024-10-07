@@ -2,6 +2,9 @@
 
 This repository contains the code for the paper **"Dual-Domain Feature-Guided Task Alignment for Enhanced Small Object Detection"**. The proposed method includes a Small Object Enhancement Pyramid (SOEP) and Task-Aligned Head (TAH) for improved detection of small objects, particularly in UAV images. The repository includes the implementation of the model, experiments, and evaluation metrics.
 
+![Path Tracking Trajectory](ultralytics-main/images/9.6(3)(1).png)
+**Fig.1. Overall framework of D2FTA with Small Object Enhancement Pyramid(SOEP) and Task Aligned Head(TAH).**
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Requirements](#requirements)
@@ -60,6 +63,13 @@ python evaluate.py --dataset VisDrone --weights checkpoints/best_model.pth
 
 ## Model Architecture
 The proposed architecture is built on the YOLOv8 framework, featuring:
+![Path Tracking Trajectory](ultralytics-main/images/SOEP.png)
+
+**Fig. 2. Illustration of DCA and FSA in SOEP**
+
+![Path Tracking Trajectory](ultralytics-main/images/TAH.png)
+
+**Fig. 3.  Illustration of our proposed TAH**
 
 - **SOEP**: Extracts high-frequency features using spectral analysis.
 - **TAH**: Combines classification and localization tasks to improve alignment.
