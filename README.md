@@ -42,9 +42,6 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-Training:
-
-## Usage
 
 ### Training:
 
@@ -81,7 +78,17 @@ Our experiments are conducted on the VisDrone dataset. The dataset consists of i
 ## Results
 The model outperforms previous state-of-the-art models with an improvement of 12.7% in mAP@0.5 and 14.19% in mAP@0.5:0.95 on the VisDrone dataset.
 
-| Model          | mAP@0.5 | mAP@0.5:0.95 |
-|----------------|---------|--------------|
-| Baseline YOLOv8| 34.6%   | 17.8%        |
-| D2FTA (ours)   | 42.8%   | 25.9%        |
+| Model                           | Input Shape | GFlops ↓ | Params ↓ | mAP@0.5:0.95 ↑ | mAP@0.5 ↑ |
+|----------------------------------|-------------|----------|----------|----------------|-----------|
+| Faster-RCNN-R50-FPN-CIOU         | (768, 1344) | 208G     | 41.39M   | 0.194          | 0.329     |
+| Cascade-RCNN-R50-FPN             | (768, 1344) | 236G     | 69.29M   | 0.197          | 0.326     |
+| TOOD-R50                         | (768, 1344) | 199G     | 32.04M   | 0.204          | 0.339     |
+| DINO                             | (750, 1333) | 274G     | 47.56M   | 0.253          | 0.445     |
+| YOLOv8-QSD                       | (640, 640)  | 7.3G     | 2.072M   | 0.168          | 0.346     |
+| YOLOX-Tiny                       | (640, 640)  | 7.578G   | 5.035M   | 0.148          | 0.278     |
+| LD-YOLOv10                       | (640, 640)  | 23.7G    | 3.04M    | 0.235          | 0.394     |
+| RT-DETR                          | (640, 640)  | 85.1G    | 32.68M   | 0.253          | 0.422     |
+| LWUAVDet                         | (640, 640)  | 19.2G    | 5.2M     | 0.247          | 0.414     |
+| LUDY-S                           | (640, 640)  | -        | 10.34M   | -              | 0.417     |
+| **Ours (D2FTA)**                 | (640, 640)  | 46.7G    | 9.97M    | **0.259**      | **0.428** |
+
